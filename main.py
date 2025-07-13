@@ -44,3 +44,36 @@ if user_choice == 1:
         print(f"The total for your order will be ${large_cost}")
     if user_pizza_size_choice == "family":
         print(f"The total for your order will be ${family_cost}")
+if user_choice == 2:
+    print("May I start with your name, phone number and address?")
+    name = input("Enter your name: ")
+    phone = input("Enter your phone number: ")
+    print("What can I get for you today?")
+    for item in pizzas:
+        print(item)
+    user_pizza_choice = input("I would like: ")
+    if user_pizza_choice in pizzas:
+        pass
+    while not user_pizza_choice in pizzas:
+        print(f"'{user_pizza_choice}' is not on our menu")
+        print("What can I get for you today?")
+        user_pizza_choice = input("I would like: ")
+
+    print("What size were you after?")
+    for item in sizes:
+        print(item)
+    user_pizza_size_choice = input("I would like: ")
+    if user_pizza_size_choice in sizes:
+        pass
+    while not user_pizza_size_choice in sizes:
+        print(f"'{user_pizza_size_choice}' is not on our menu")
+        print("What size were you after?")
+        user_pizza_size_choice = input("I would like: ")
+    if user_pizza_size_choice == "small":
+        print(f"The total for your order will be ${base_cost}")
+    if user_pizza_size_choice == "medium":
+        print(f"The total for your order will be ${medium_cost}")
+    if user_pizza_size_choice == "large":
+        print(f"The total for your order will be ${large_cost}")
+    if user_pizza_size_choice == "family":
+        print(f"The total for your order will be ${family_cost}")
